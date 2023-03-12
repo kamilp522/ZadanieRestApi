@@ -1,12 +1,11 @@
 import express from "express";
 import bodyParser from "body-parser";
-import sequlize from "../database/database";
+
+import { connectToDatabase } from "./config/config";
 
 import booksRouter from "./controllers/books";
 
-sequlize
-  .sync()
-  .then(() => console.log("Established connection to the database"));
+connectToDatabase();
 
 const app = express();
 
