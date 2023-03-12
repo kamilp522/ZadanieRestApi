@@ -1,12 +1,13 @@
 import express from "express";
 import bodyParser from "body-parser";
+import sequlize from "../database/database";
+
+sequlize
+  .sync()
+  .then(() => console.log("Established connection to the database"));
 
 const app = express();
 
 app.use(bodyParser.json());
-
-app.get("/", (request, response) => {
-  response.send("Hello, world!");
-});
 
 export default app;
