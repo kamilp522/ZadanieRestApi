@@ -3,7 +3,7 @@ import Book from "../models/book";
 
 const booksRouter = express.Router();
 
-booksRouter.get("/", async (request, response) => {
+booksRouter.get("/", async (_request, response) => {
   const books = await Book.findAll();
   response.send(books);
 });
