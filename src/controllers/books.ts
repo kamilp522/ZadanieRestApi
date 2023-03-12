@@ -1,22 +1,27 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import Book from "../models/book";
+import { BookEntry } from "../types";
 
 const booksRouter = express.Router();
 
-booksRouter.get("/", async (_request, response) => {
+booksRouter.get("/", async (_request: Request, response: Response) => {
   const books = await Book.findAll();
   response.send(books);
 });
 
-booksRouter.post("/add", async (request, response) => {
-  await Book.create(request.body);
+booksRouter.post("/add", async (request: Request, response: Response) => {
+  const bookEntry: BookEntry = request.body;
+  await Book.create(bookEntry);
   response.send("Created a new book record");
 });
 
-booksRouter.delete("/delete/:id", async (request, response) => {
-  const requestId = request.params.id;
-  await Book.destroy({ where: { id: requestId } });
-  response.send(`Deleted book record with id ${requestId}`);
-});
+booksRouter.delete(
+  "/delete/:id",
+  async (request: Request, response: Response) => {
+    const requestId = request.params.id;
+    await Book.destroy({ where: { id: requestId } });
+    response.send(`Deleted book record with id ${requestId}`);
+  }
+);
 
 export default booksRouter;
