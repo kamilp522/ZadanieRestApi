@@ -8,7 +8,7 @@ Content-Type: application/json
 
 {
   "title": "title of the book",
-  "author": "author of the book"
+  "author": ""
 }
 
 ###
