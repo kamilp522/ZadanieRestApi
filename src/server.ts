@@ -1,4 +1,3 @@
-import "express-async-errors";
 import http from "http";
 import app from "./app";
 
@@ -6,6 +5,4 @@ const port = 3000;
 
 const server = http.createServer(app);
 
-server.listen(port, () =>
-  console.log("App listen on port 3000 \nhttp://localhost:3000")
-);
+server.listen(port, () => console.log("App listen on port 3000 \nhttp://localhost:3000"));

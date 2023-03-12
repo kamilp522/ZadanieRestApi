@@ -12,5 +12,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/books/delete/2 HTTP/1.1
+DELETE http://localhost:3000/books/delete/9 HTTP/1.1
 Content-Type: application/json
