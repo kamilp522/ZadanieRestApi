@@ -4,6 +4,8 @@ This API allows users to see, save and delete records of books to the sqlite dat
 
 ## Install
 
+Clone the repository, then:
+
     npm install
 
 ## Run the API
@@ -17,6 +19,12 @@ This API allows users to see, save and delete records of books to the sqlite dat
 2. **`/books/add`** (method: POST, request parameters: none, body: yes) --> This endpoint allows user to add a new book record to the database. Request has to contain body in json format, with both title and author of the book.
 
 3. **`/books/delete/:id`** (method: DELETE, request parameters: yes, body: none) --> Endpoint for deleting a single book record. Requires the book record id provided as a parameter in the request.
+
+## Testing endpoints
+
+Project contains file requests.rest that show examples of http requests for the specified endpoints. Require [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for Visual Studio Code.
+
+[Postman](https://www.postman.com/) is also popular for testing API endpoints and might be used instead of REST Client extension.
 
 ### Technologies used
 
