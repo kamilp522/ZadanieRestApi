@@ -27,3 +27,5 @@ This API allows users to see, save and delete records of books to the sqlite dat
 3. [Sqlite](https://www.sqlite.org/index.html) Small, fast and full-featured SQL database engine.
 
 4. [Sequelize](https://sequelize.org/) Sequelize is a modern TypeScript and Node.js ORM.
+
+5. [TypeScript](https://typescriptlang.org/) Superset of JavaScript that adds optional static typing to the language.
